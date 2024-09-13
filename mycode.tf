@@ -430,7 +430,7 @@ resource "aws_instance" "my_private_instance" {
   subnet_id                   = aws_subnet.myprivatesubnet.id
   associate_public_ip_address = false
   vpc_security_group_ids      = [aws_security_group.myprivatesecurity.id]
-  user_data                   = file("testing.sh")
+  user_data                   = file("myprivate.sh")
 
   tags = {
     Name = "my_private_instance"
